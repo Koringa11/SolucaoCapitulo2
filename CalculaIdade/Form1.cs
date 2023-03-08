@@ -16,5 +16,22 @@ namespace CalculaIdade
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAnoUltimoAniversario_Enter(object sender, EventArgs e)
+        {
+            if (txtAnoNascimento.Text.Trim().Length < 4)
+            {
+                MessageBox.Show("É preciso informar o ANO DE " +
+                    "NASCIMENTO COM 4 dígitos", "Atenção!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                txtAnoNascimento.Focus();
+            }
+        }
     }
 }
